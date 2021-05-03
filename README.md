@@ -1,8 +1,12 @@
-![image](https://user-images.githubusercontent.com/57346455/116870893-547f7d80-ac4e-11eb-8181-34693f475734.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/57346455/116870893-547f7d80-ac4e-11eb-8181-34693f475734.png"/>
+</p> 
 
 <br/>
 
-# 👉 O2_ALGORITHM_STUDY 👈
+<center>
+<h1><strong>👉 O2_ALGORITHM_STUDY 👈</strong></h1>
+</center>
 
 <br/>
 
