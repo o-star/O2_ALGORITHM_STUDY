@@ -35,5 +35,5 @@
 |            날짜            |                            문제 1                            |                        문제 2                         |
 | :------------------------: | :----------------------------------------------------------: | :---------------------------------------------------: |
 | 1주차(21.05.03 ~ 21.05.09) |    [소문난 칠공주](https://www.acmicpc.net/problem/1941)     | [전화번호 목록](https://www.acmicpc.net/problem/5052) |
-| 2주차(21.05.10 ~ 21.05.16) | [수식 최대화(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67257) |                                                       |
+| 2주차(21.05.10 ~ 21.05.16) | [수식 최대화(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67257) | [수족관1](https://www.acmicpc.net/problem/8982)                                                   |
 
