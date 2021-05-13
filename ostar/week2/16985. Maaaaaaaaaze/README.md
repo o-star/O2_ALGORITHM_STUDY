@@ -32,93 +32,97 @@
 ```c++
 #include <iostream>
 #include <queue>
-#include <string>
 #include <algorithm>
-#include <cmath>
 #include <vector>
 
-#define ll long long
+#define MAX 100000
 
 using namespace std;
-vector<ll> numbervec;
-vector<char> operatorvec;
-ll maxresult;
-char opary[3] = {'*', '+', '-'};
-bool usedop[3];
+typedef struct Qnode {
+    int x, y, z, count;
+} Qnode;
+vector<vector<vector<bool>>> originmap, map;
+bool usedfloor[5];
+int di[6] = {0, 1, 0, -1, 0, 0}, dj[6] = {1, 0, -1, 0, 0, 0}, dz[6] = {0, 0, 0, 0, 1, -1};
+int minans = MAX;
 
-ll charToCalculResult(ll a, ll b, char op) {
-    switch (op) {
-        case '*':
-            return a * b;
-        case '+':
-            return a + b;
-        case '-':
-            return a - b;
-    }
-}
+void bfs3D() {
+    queue<Qnode> q;
+    bool visit[5][5][5]{false};
+    q.push(Qnode{0, 0, 0, 0});
 
-void calculExpression(string priorities) {
-    queue<ll> numberq;
-    queue<char> operatorq;
-
-    int size = numbervec.size();
-    for (int i = 0; i < size; i++)
-        numberq.push(numbervec[i]);
-    size = operatorvec.size();
-    for (int i = 0; i < size; i++)
-        operatorq.push(operatorvec[i]);
-
-    for (int i = 0; i < 3; i++) {
-        char orderopt = priorities[i];
-        int size = operatorq.size();
-        ll operand1 = numberq.front();
-        numberq.pop();
-        while (size--) {
-            ll operand2 = numberq.front();
-            numberq.pop();
-            char curopt = operatorq.front();
-            operatorq.pop();
-
-            if (orderopt == curopt) operand1 = charToCalculResult(operand1, operand2, curopt);
-            else {
-                numberq.push(operand1);
-                operatorq.push(curopt);
-                operand1 = operand2;
-            }
+    while (!q.empty()) {
+        int curx = q.front().x, cury = q.front().y, curz = q.front().z, curcnt = q.front().count;
+        q.pop();
+        if (curx == 4 && cury == 4 && curz == 4) {
+            minans = min(minans, curcnt);
+            return;
         }
-        numberq.push(operand1);
+        if (visit[curx][cury][curz]) continue;
+        visit[curx][cury][curz] = true;
+
+        for (int k = 0; k < 6; k++) {
+            int cmpx = curx + di[k], cmpy = cury + dj[k], cmpz = curz + dz[k];
+            if (cmpx < 0 || cmpx >= 5 || cmpy < 0 || cmpy >= 5 || cmpz < 0 || cmpz >= 5) continue;
+            if (!map[cmpx][cmpy][cmpz]) continue;
+            q.push(Qnode{cmpx, cmpy, cmpz, curcnt + 1});
+        }
     }
-    maxresult = max(maxresult, abs(numberq.front()));
 }
 
-void selectPriority(string orderstr) {
-    if (orderstr.length() == 3) {
-        calculExpression(orderstr);
+void rotateEachPlane(int curplane) {
+    if (curplane == 5) {
+        if (map[0][0][0] && map[4][4][4]) bfs3D();
         return;
     }
 
-    for (int i = 0; i < 3; i++) {
-        if (usedop[i]) continue;
-        usedop[i] = true;
-        selectPriority(orderstr + opary[i]);
-        usedop[i] = false;
+    for (int i = 0; i < 4; i++) {
+        rotateEachPlane(curplane + 1);
+        bool cmpplane[5][5];
+
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
+                cmpplane[4 - j][i] = map[curplane][i][j];
+
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
+                map[curplane][i][j] = cmpplane[i][j];
     }
 }
 
-long long solution(string str) {
-    string cmpstr = "";
-    
-    for (int i = 0; i < str.length(); i++) {
-        if (str[i] == '*' || str[i] == '+' || str[i] == '-') {
-            numbervec.push_back(stoll(cmpstr));
-            cmpstr = "";
-            operatorvec.push_back(str[i]);
-        } else cmpstr += str[i];
+void stackPlanes(int curfloor) {
+    if (curfloor == 5) {
+        rotateEachPlane(0);
+        return;
     }
-    numbervec.push_back(stoll(cmpstr));
 
-    selectPriority("");
-    return maxresult;
+    for (int i = 0; i < 5; i++)
+        if (!usedfloor[i]) {
+            usedfloor[i] = true;
+            map[curfloor] = originmap[i];
+            stackPlanes(curfloor + 1);
+            usedfloor[i] = false;
+        }
+}
+
+int main() {
+    bool input;
+    originmap.resize(5);
+    map.resize(5);
+    for (int i = 0; i < 5; i++) {
+        originmap[i].resize(5);
+        for (int j = 0; j < 5; j++) {
+            originmap[i][j].resize(5);
+            for (int k = 0; k < 5; k++) {
+                cin >> input;
+                originmap[i][j][k] = input;
+            }
+        }
+    }
+
+    stackPlanes(0);
+    cout << ((minans == MAX) ? -1 : minans) << '\n';
+    return 0;
 }
 ```
 
