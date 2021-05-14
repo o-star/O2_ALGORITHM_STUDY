@@ -10,12 +10,12 @@
 
 문자열을 활용하여 수식 계산을 해야하는 문제, 처음엔 후위표현식(postfix)로 변경하고 스택에 넣는 식으로 풀이를 해야하나 생각했지만 vector를 활용하여 연산자와 수를 잘 이용하여 중위 표기식으로 최대한 사람에 가깝에 풀이해도 해결할 수 있을 것 같다는 생각에 내방식대로 풀이하게 되었다. 글로 표현하려니 다른 사람이 이해하기 어려울 것 같아 노트 필기를 첨부함
 
-1. 문자열을 [0, length) 까지 순회하면서 숫자는 vector<long long>num, 연산자는 vector<char>op에 저장해두자. <br>(실행할때 마다 tokenizing하는 불필요한 시간을 줄이기 위해)
-2. next_permutation으로 vector<char>v_perm의 \* / + / - 의 순서를 바꿔준다. 연산자 우선순위를 위해 vector에 저장 (index 0부터 연산 실행)
-3. 저장해둔 vector<long long>num을 v_num, vector<char>op를 v_op에 각각 복사한다.
+1. 문자열을 [0, length) 까지 순회하면서 숫자는 vector\<long long>num, 연산자는 vector\<char>op에 저장해두자. <br>(실행할때 마다 tokenizing하는 불필요한 시간을 줄이기 위해)
+2. next_permutation으로 vector\<char>v_perm의 \* / + / - 의 순서를 바꿔준다. 연산자 우선순위를 위해 vector에 저장 (index 0부터 연산 실행)
+3. 저장해둔 vector\<long long>num을 v_num, vector\<char>op를 v_op에 각각 복사한다.
 4. 이중 for문을 활용하는데 i는 v_perm에서 현재 연산하려는 연산자. i:[0, 3)<br>
    j는 연산자를 저장해두고 있는 v_op의 몇번째 index인지로 사용된다. j:[0, v_op.size() )<br> 현재 v_perm[i]와 v_op[j]가 같다면(현재 우선순위에 해당하는 연산자라면) v_num[j]와 v_num[j+1]을 v_op[j]에 해당하는 연산을 실행하여 v_num[j+1]에 저장한다.
-5. 4.에서 선택된 j번째 index는 연산이 끝나 더이상 필요없는 index이므로 vector<int>deleteV에 index값을 저장해둔 뒤 해당 i번째 연산자에 대한 연산이 끝이 난다면 deleteV에 저장되있던 index 값들을 v_num과 v_op에서 erase해주자 이때 vector에 erase를 하면서 뒤에있던 index들이 1씩 shift되므로 count라는 변수를 사용해서 shift되는 값을 고려하여 erase해주자!<br>
+5. 4.에서 선택된 j번째 index는 연산이 끝나 더이상 필요없는 index이므로 vector\<int>deleteV에 index값을 저장해둔 뒤 해당 i번째 연산자에 대한 연산이 끝이 난다면 deleteV에 저장되있던 index 값들을 v_num과 v_op에서 erase해주자 이때 vector에 erase를 하면서 뒤에있던 index들이 1씩 shift되므로 count라는 변수를 사용해서 shift되는 값을 고려하여 erase해주자!<br>
 6. 모든 연산이 끝났을때 v_num[0]만이 남게되고 해당 연산의 결과값이 된다.
 
 ### <첨부>
