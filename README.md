@@ -32,10 +32,11 @@
 
 ### 📎 스터디 일정표
 
-|            날짜            |                            문제 1                            |                            문제 2                            |
-| :------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| 1주차(21.05.03 ~ 21.05.09) |    [소문난 칠공주](https://www.acmicpc.net/problem/1941)     |    [전화번호 목록](https://www.acmicpc.net/problem/5052)     |
-| 2주차(21.05.10 ~ 21.05.16) | [수식 최대화(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67257) |    [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)     |
-| 3주차(21.05.17 ~ 21.05.23) | [경주로 건설(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67259) | [마법사 상어와 파이어볼](https://www.acmicpc.net/problem/20056) |
-| 4주차(21.05.24 ~ 21.05.30) |          [합](https://www.acmicpc.net/problem/1132)          |      [거울 설치](https://www.acmicpc.net/problem/2151)       |
-| 5주차(21.06.21 ~ 21.06.27) |        [가스관](https://www.acmicpc.net/problem/2931)        |  [소코반](https://www.acmicpc.net/problem/4577)   |
+|            날짜             |                            문제 1                            |                            문제 2                            |
+| :-------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| 1주차(21.05.03 ~ 21.05.09)  |    [소문난 칠공주](https://www.acmicpc.net/problem/1941)     |    [전화번호 목록](https://www.acmicpc.net/problem/5052)     |
+| 2주차(21.05.10 ~ 21.05.16)  | [수식 최대화(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67257) |    [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)     |
+| 3주차(21.05.17 ~ 21.05.23)  | [경주로 건설(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67259) | [마법사 상어와 파이어볼](https://www.acmicpc.net/problem/20056) |
+| 4주차(21.05.24 ~ 21.05.30)  |          [합](https://www.acmicpc.net/problem/1132)          |      [거울 설치](https://www.acmicpc.net/problem/2151)       |
+| 5주차(21.06.21 ~ 21.06.27)  |        [가스관](https://www.acmicpc.net/problem/2931)        |        [소코반](https://www.acmicpc.net/problem/4577)        |
+| 6주차(21.06.28 ~ 21. 07.04) | [키패드 누르기(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67256) |                                                              |
