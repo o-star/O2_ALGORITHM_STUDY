@@ -40,4 +40,6 @@
 | 4주차(21.05.24 ~ 21.05.30)  |          [합](https://www.acmicpc.net/problem/1132)          |      [거울 설치](https://www.acmicpc.net/problem/2151)       |
 | 5주차(21.06.21 ~ 21.06.27)  |        [가스관](https://www.acmicpc.net/problem/2931)        |        [소코반](https://www.acmicpc.net/problem/4577)        |
 | 6주차(21.06.28 ~ 21. 07.04) | [키패드 누르기(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67256) |        [오름세](https://www.acmicpc.net/problem/3745)        |
-| 7주차(21.07.05 ~ 21. 07.11) |  |      [보급로](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15QRX6APsCFAYD&categoryId=AV15QRX6APsCFAYD&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=1#none)    |
+| 7주차(21.07.05 ~ 21. 07.11) |                                                              | [보급로](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15QRX6APsCFAYD&categoryId=AV15QRX6APsCFAYD&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=1#none) |
+| 8주차(21.08.23 ~ 21. 08.29) | [뉴스 클러스터링(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/17677) |                                                              |
+
