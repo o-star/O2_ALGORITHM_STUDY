@@ -42,5 +42,5 @@
 | 6주차(21.06.28 ~ 21.07.04) | [키패드 누르기(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/67256) |        [오름세](https://www.acmicpc.net/problem/3745)        |
 | 7주차(21.07.05 ~ 21.07.11) |                                                              | [보급로](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV15QRX6APsCFAYD&categoryId=AV15QRX6APsCFAYD&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=1#none) |
 | 8주차(21.08.23 ~ 21.08.29) | [뉴스 클러스터링(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/17677) | [무지의 먹방 라이브(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/42891#) |
-| 9주차(21.08.30 ~ 21.09.05) | [후보키(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/42890) |                                                              |
+| 9주차(21.08.30 ~ 21.09.05) | [후보키(KAKAO)](https://programmers.co.kr/learn/courses/30/lessons/42890) |      [비밀 모임](https://www.acmicpc.net/problem/13424)      |
 
