@@ -22,7 +22,7 @@
 
 #### 코드 : 
 
-```python
+```c++
 #include <iostream>
 #include <queue>
 #include <vector>
